@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\App\AppTemplate.App.Database.Migrations\AppTemplate.App.Database.Migrations.csproj" />
+        <ProjectReference Include="..\..\App\AppTemplate.App.Web.Angular\AppTemplate.App.Web.Angular.csproj" />
+        <ProjectReference Include="..\..\Core\Core.Tests\Core.Tests.csproj" />
+        <ProjectReference Include="..\AppTemplate.Users\AppTemplate.Users.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="appsettings.json" />
+      <Content Include="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="obj\Debug\net7.0\" />
+    </ItemGroup>
+
+</Project>
